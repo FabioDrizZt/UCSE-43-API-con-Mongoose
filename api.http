@@ -1,0 +1,55 @@
+### Welcome to the Movie API
+GET http://localhost:3000/
+Accept: application/json
+
+###
+
+### Get all movies
+GET http://localhost:3000/movies/
+Accept: application/json
+
+###
+
+### Get movies by genre
+GET http://localhost:3000/movies/?genre=Crime
+Accept: application/json
+
+###
+
+### Get a movie by ID
+GET http://localhost:3000/movies/671a942ee4687b7006ddc22e
+Accept: application/json
+
+###
+
+### Create a new movie
+POST http://localhost:3000/movies/
+Content-Type: application/json
+
+{
+    "title": "Mi nueva pelicula",
+    "year": 2024,
+    "director": "Fabio Argañaraz",
+    "duration": 200,
+    "poster": "miposter.jpg",
+    "genre": ["Action", "Sci-Fi"],
+    "rate": 8.8
+}
+
+### Update an existing movie
+PUT http://localhost:3000/movies/6723d5d6236f1ff6646d4e81
+Content-Type: application/json
+
+{
+    "title": "Mi pelicula actualizada",
+    "year": 2023,
+    "director": "Fabio Damian, Argañaraz",
+    "duration": 300,
+    "poster": "miposter.jpg",
+    "genre": ["Action", "Sci-Fi"],
+    "rate": 8.8
+}
+
+### Delete an existing movie
+DELETE http://localhost:3000/movies/6723d5d6236f1ff6646d4e81
+
